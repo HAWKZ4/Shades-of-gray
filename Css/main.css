@@ -13,7 +13,6 @@
   margin: 0;
   padding: 0;
 }
-
 h2 {
   text-transform: uppercase;
 }
@@ -26,12 +25,8 @@ a {
 ul {
   list-style-type: none;
 }
-html {
-  scroll-behavior: smooth;
-}
 body {
   font-family: "Barlow", sans-serif;
-  
 }
 .container {
   padding-left: 15px;
@@ -147,104 +142,66 @@ h2.head span::before {
   width: 88%;
   height: 4px;
   bottom: -2px;
-  left: -110px;
+  left: -90px;
   transition: 0.6s;
 }
 /* Start intro-img */
-.cimage {
-  position: relative
+.intro-img .image {
+  position: relative;
 }
-.cimage img {
+.intro-img .image img {
   width: 100%;
-  height: 90vh
+  min-height: 90vh;
 }
-.cimage .info {
+.intro-img .image h1 {
+  top: 280px;
   position: absolute;
-  left: 76%;
-  top: 50%;
-  transform: translate(-50% , -50% );
-}
-.cimage .info h1 {
-  color: #fff;
-  font-size: 40px;
-  min-width: 420px;
+  font-size: 45px;
+  color: #fbf6f1;
+  right: 20px;
+  max-width: 400px;
   text-align: right;
   text-transform: uppercase;
 }
-.cimage .info span {
-  color: var(--main-color)
+.intro-img .image h1 span {
+  color: var(--main-color);
 }
-.cimage .info .links {
-  display: flex;   
-  justify-content: right;
+.intro-img .image a {
+  top: 535px;
+  position: absolute;
+  font-size: 16px;
+  color: #fbf6f1;
+  right: 20px;
+  max-width: 400px;
+  text-align: right;
+  text-transform: uppercase;
+  transition: var(--main-transition);
 }
-.cimage .info a:first-of-type {
+.intro-img .image a:first-of-type {
+  margin-right: 175px;
   background-color: #fff;
-  border: none;
-  color: var(--sec-color);
-  padding: 15px 30px;
+  color: grey;
+  padding: 20px;
   font-weight: bold;
-  font-size: 18px;
-  cursor: pointer;
-  display: inline-block;
-  width: fit-content;
-  transition: var(--main-transition)
 }
-.cimage .info a:first-of-type:hover {
+.intro-img .image a:last-of-type {
+  background-color: grey;
+  color: white;
+  padding: 20px;
+  font-weight: bold;
+}
+.intro-img .image a:first-of-type:hover {
   color: var(--main-color);
 }
-
-.cimage .info a:last-of-type {
-  background-color: #555555;
-  border: none;
-  color: #fff;
-  padding: 15px 30px;
-  font-weight: bold;
-  font-size: 18px;
-  cursor: pointer;
-  display: inline-block;
-  width: fit-content;
-  margin-left: 20px;
-  transition: var(--main-transition)
-}
-.cimage .info a:last-of-type:hover {
+.intro-img .image a:last-of-type:hover {
   color: var(--main-color);
 }
-@media(max-width: 991px) {
-  .cimage .info h1 {
-    color: #fff;
-    font-size: 33px;
-    min-width: 300px;
-    text-align: right;
-    text-transform: uppercase;
+.intro-img .boxes {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
-.cimage .info .links a{
-  padding: 10px 20px;
-  font-size: 15px
-}
-}
-@media(max-width: 700px) {
-
-  .cimage .info {
-    left: 60%
-  }
-
-
-  .cimage .info h1 {
-    color: #fff;
-    font-size: 25px;
-    min-width: 230px;
-    text-align: right;
-    text-transform: uppercase;
-  }
-  .cimage .info .links a{
-    padding: 7px 14px
-  }
-
-}
-
-
-
 
 /* End intro-img */
 
@@ -458,12 +415,11 @@ h2.head span::before {
 }
 .choose .box:nth-of-type(2) .box i {
   margin-right: 15px;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background-color: #fff;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
   display: flex;
   color: var(--sec-color);
   margin-top: 10px;
@@ -1212,11 +1168,6 @@ h2.head span::before {
 .blog .boxes .box:hover {
   box-shadow: 0 2px 15px rgb(0 0 0 / 30%);
 }
-.blog .boxes .box:hover .foot span i{
-  animation: move .8s linear infinite;
-
-}
-
 .blog .boxes .box .image img {
   max-width: 100%;
 }
@@ -1836,7 +1787,6 @@ h2.head span::before {
   border: none;
   cursor: pointer;
   transition: var(--main-transition);
-  letter-spacing: 2px;
 }
 .finalz .box:nth-of-type(4) .form input[type="submit"]:hover {
   color: #fff;
@@ -1949,28 +1899,4 @@ h2.head span::before {
     transform: rotate(360deg);
   }
 }
-
-@keyframes move-up-down {
-  0% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translateY(10px)
-  }
-  40% {
-    transform: translateY(15px)
-  }
-  60% {
-    transform: translateY(20px);
-  }
-  80% {
-    transform: translateY(25px);
-    
-  }
-  100% {
-    transform: translateY(0px)
-
-  }
-}
-
 /* End animation */
