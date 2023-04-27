@@ -142,7 +142,7 @@ h2.head span::before {
   width: 88%;
   height: 4px;
   bottom: -2px;
-  left: -90px;
+  left: -130px;
   transition: 0.6s;
 }
 /* Start intro-img */
@@ -204,6 +204,12 @@ h2.head span::before {
 }
 
 /* End intro-img */
+ 
+@media (max-width: 800px) {
+  .intro-img .image img {
+    object-fit: cover;
+  }
+}
 
 @media (max-width: 768px) {
   .intro .spans:hover .links {
@@ -424,6 +430,7 @@ h2.head span::before {
   color: var(--sec-color);
   margin-top: 10px;
   transition: var(--main-transition);
+  border-radius: 50%
 }
 .choose .box:nth-of-type(2) .box:hover i {
   color: var(--main-color);
@@ -472,8 +479,7 @@ h2.head span::before {
     display: none;
   }
   .choose .box:nth-of-type(1) img {
-    width: 100%;
-    height: 500px;
+    display: none
   }
 }
 /* End choose */
@@ -570,7 +576,7 @@ h2.head span::before {
 }
 .work .boxes {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .work .boxes .box {
   flex-basis: 30%;
@@ -580,6 +586,7 @@ h2.head span::before {
   position: relative;
   color: var(--sec-color);
   margin-bottom: 10px;
+  left: 40px;
 }
 .work .boxes h3::before {
   content: "\f00c";
@@ -593,9 +600,9 @@ h2.head span::before {
   transition: var(--main-transition);
   border-radius: 50%;
   color: var(--sec-color);
-  width: 30px;
-  height: 30px;
-  left: -35px;
+  width: 25px;
+  height: 25px;
+  left: -42px;
 }
 .work .boxes .box:hover h3:before {
   color: var(--main-color);
@@ -1114,6 +1121,9 @@ h2.head span::before {
   color: #fff;
   margin-bottom: 10px;
 }
+.enviro .image .boxes .box .head h3{
+  display: flex;
+}
 .enviro .image .boxes .box .head i {
   margin-right: 15px;
   font-size: 20px;
@@ -1217,6 +1227,7 @@ h2.head span::before {
 .blog .boxes .box:hover .foot span a {
   color: var(--main-color);
 }
+
 .blog .boxes .box .foot span i {
   margin-left: 2px;
   color: var(--sec-color);
@@ -1224,6 +1235,7 @@ h2.head span::before {
 }
 .blog .boxes .box:hover .foot span i {
   color: var(--main-color);
+  animation: move 1s infinite;
 }
 .blog .dodo {
   display: flex;
@@ -1260,6 +1272,15 @@ h2.head span::before {
   padding: 10px 20px;
   text-transform: uppercase;
   font-size: var(--font-a) !important;
+}
+@keyframes move {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(10px);
+
+  }
 }
 /* End Blog */
 /* Start quote */
@@ -1561,6 +1582,8 @@ h2.head span::before {
 .fun .box .info {
   margin-left: 30px;
   position: relative;
+    font-size: 35px;
+    font-weight: bold;
 }
 
 .fun .box .info::before {
@@ -1578,6 +1601,7 @@ h2.head span::before {
   font-size: 13px;
   font-size: 12px;
   line-height: var(--lh);
+  width: 70px
 }
 
 @media (max-width: 991px) {
@@ -1603,6 +1627,11 @@ h2.head span::before {
 
   .fun .in {
     top: 54%;
+  }
+}
+@media (max-width: 600px) {
+  .fun .in {
+    padding: 40px 0 
   }
 }
 
